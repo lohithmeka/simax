@@ -555,6 +555,9 @@ p{
         margin-top: 1%;
         margin-inline: 0;
     }
+    .four2 img{
+        margin-inline: 25%;
+    }
     .three2 h2{
         font-size: 1.2em;
         margin-bottom: 2%;
