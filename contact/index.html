@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simax Systems</title>
+  <link rel="icon" href="/static/images/simax logo mini.png" type="image/png">
+  <link rel="stylesheet" href="/static/css/contact.css">
+</head>
+
+<body class="bas">
+    <div class="nav">
+      <a class="logo" href="/"><img src="/static/images/logo.png" alt="Simax"></a>
+      <div class="hero">        
+          <a class="a1" href="/">Home</a>
+          <a class="a1" href="/about/">About us</a>
+          <a class="a1" href="/products/">Products</a>
+          <a class="a1" href="/contact/">Contact</a>
+      </div>
+    </div> 
+
+  <div class="two">
+      <div class="two1">
+          <h2><span>Get in Touch With Us</span></h2>
+          <p>Have questions about how our AI solutions can transform your governance processes? Our team is ready to assist you with personalized consultations and technical support.</p>
+          <h3>Phone</h3>
+          <p>+91-78930 66401</p>
+          <h3>Email</h3>
+          <p>contact@simaxsystems.com</p>
+          <h3>Connect With Us</h3>
+          <a href="https://www.linkedin.com/company/simaxsystems/"><img src="/static/images/c-2.png" alt=""></a>
+      </div>
+      <div class="two2">
+          <h2><span>Drop Us a Message</span></h2>
+          <form id="contactForm" method="POST">
+              
+              <label for="name">Full Name: </label><br>
+              <input type="text" id="name" name="name" required class="in" placeholder="Enter your name"><br>
+
+              <label for="email">Email: </label><br>
+              <input type="email" id="email" name="email" required class="in" placeholder="Enter your mail"><br>
+
+              <label for="phone">Phone: </label><br>
+              <input type="tel" id="phone" name="phone" class="in" placeholder="Enter your phone number"><br>
+
+              <label for="message">Message: </label><br>
+              <textarea id="message" name="message" rows="4" required class="in" placeholder="How can we help you?"></textarea> <br>
+              
+              <button type="submit" class="but">Connect with Simax</button>
+          </form>
+      </div>
+  </div>
+
+  <footer>
+      <div class="foo">
+          <img src="/static/images/f-1.png" alt="logo">
+          <p class="foop">Simax Systems is a digital-native tech startup building bespoke AI-driven software systems for governance. Our suite of AI solutions addresses the challenges of fragmented data, manual processes, and the demand for timely, accurate responses in government. </p>
+      </div>
+      <div class="foo1">
+          <h2>Quick Links</h2>
+          <a class="fa" href="/">Home</a><br>
+          <a class="fa" href="/about/">About Us</a><br>
+          <a class="fa" href="/products/">Products</a><br>
+          <a class="fa" href="/contact/">Contact</a><br>
+      </div>
+      <div class="foo">
+          <h2>Products</h2>
+          <a class="fa" href="/products/#p-1">Data Intelligence & Management</a><br>
+          <a class="fa" href="/products/#p-2">Strategic Insight & Policy Support</a><br>
+          <a class="fa" href="/products/#p-3">Administrative Automation</a><br>
+      </div>
+      <div class="foo">
+          <h2>Contact Us</h2>
+          <p><img src="/static/images/ca.png" alt="">+91-78930 66401</p>
+          <p><img src="/static/images/lo.png" alt="">9th Floor, RMZ Latitude, Hebbal Kempapura, Bengaluru, Karnataka, India - 560024</p>
+          <p><img src="/static/images/ma.png" alt="">contact@simaxsystems.com</p>
+      </div>
+  </footer>
+  <p class="last">© 2025 Simax. All rights reserved.</p>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p>Sending your message...</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    // Show popup instantly
+    document.getElementById("popup").style.display = "flex"; 
+    document.querySelector("#popup p").innerText = "Sending your message..."; 
+
+    let formData = new FormData(e.target);
+
+    try {
+      let response = await fetch("https://ud6liewslqndueygobujwfmtjq0xrygj.lambda-url.ap-south-1.on.aws/", {
+        method: "POST",
+        body: new URLSearchParams(formData)
+      });
+
+      let result = await response.json();
+
+      if (result.status === "success") {
+        document.querySelector("#popup p").innerText = "Message sent successfully!";
+        e.target.reset();
+      } else {
+        document.querySelector("#popup p").innerText = "Something went wrong: " + result.message;
+      }
+    } catch (error) {
+      document.querySelector("#popup p").innerText = "Network error. Please try again.";
+    }
+  });
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+  </script>
+</body>
+</html>

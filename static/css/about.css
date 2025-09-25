@@ -9,15 +9,11 @@
 }
 
 .hero{
-    margin-top: 1%;
+    margin-top: 2%;
     float:right;
 }
 
 .nav .a1 {
-    float: left;
-    margin-top: 1.5%;
-    margin-right: 1.5%;
-    display: block;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -40,7 +36,7 @@ head{
 }
 
 body{
-    margin-top: 7%;
+    margin-top: 6%;
     background-color: #020321;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -56,7 +52,7 @@ span{
     text-align: center;
     background-image: linear-gradient(90deg, #C3AB51 0%, #777E96 100%);
     padding-top: 2%;
-    margin-top: 6%;
+    margin-top: inherit;
     border-radius: 25px;
     margin-left: 7%;
     margin-right: 7%;
@@ -115,7 +111,6 @@ footer{
 
 .first{
     background-image: url('/static/images/ab1-1.png');
-    background-size: 100%;
     text-align: center;
 }
 .first h1{
@@ -123,8 +118,13 @@ footer{
     padding-top: 10%;
 }
 .first p{
+    opacity: 0.8;
     padding-left: 28%;
     padding-right: 28%;
+    text-align: justify;
+}
+.foop{
+    text-align: justify;
 }
 button {
     background-image: linear-gradient(90deg, #FCFF9E 0%, #DABA43 100%);
@@ -220,20 +220,37 @@ p{
     gap: 3%;
     margin-left: 7%;
     margin-right: 7%;
+    padding-bottom: 5%;
 }
 
-.four2{
-    align-items: center;
-    text-align: center;
-    padding: 5%;
-    background-color: #262D43;
-    border-radius: 25px;
+.four2 {
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+  background-color: #262D43;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+.four2 a{
+    color: white;
+    text-decoration: none;
+}
+.four2 a:hover{
+    color: black;
+    text-decoration: none;
 }
 .four2:hover{
-    border: 1.5px solid #FCFF9E;
+    background-image: linear-gradient( #dce156 0%, #edc32d 100%);
+    color: #020321;
 }
 
-
+.fut:hover{
+    border-radius: 50%;
+    filter:saturate(4);
+}
 
 
 
@@ -554,9 +571,6 @@ p{
     .four2{
         margin-top: 1%;
         margin-inline: 0;
-    }
-    .four2 img{
-        margin-inline: 25%;
     }
     .three2 h2{
         font-size: 1.2em;

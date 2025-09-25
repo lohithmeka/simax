@@ -9,15 +9,11 @@
 }
 
 .hero{
-    margin-top: 1%;
+    margin-top: 2%;
     float:right;
 }
 
 .nav .a1 {
-    float: left;
-    margin-top: 1.5%;
-    margin-right: 1.5%;
-    display: block;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -28,8 +24,6 @@
     color:  #c67700;
     text-decoration: underline;
 }
-
-
 .logo img {
     height: 15%;
     width: 15%;
@@ -128,6 +122,9 @@ footer{
     padding-left: 5%; 
     padding-right: 5%; 
 }
+.foop{
+    text-align: justify;
+}
 .last{
     text-align: center;
     background-image: linear-gradient(90deg, #C3AB51 0%, #777E96 100%);
@@ -141,16 +138,21 @@ footer{
     background-size: 100%;
 
 }
+.one1{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
 .one h1{
     font-size: 350%;
     margin-inline: 20%;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 .one p{
+    text-align: justify;
     font-size: 120%;
     margin-inline: 30%;
     opacity: 0.8;
-    padding-bottom: 10%;
 }
 .two{
     margin-top: 5%;
@@ -217,6 +219,9 @@ footer{
     margin-right: 7%;
     margin-bottom: 3%;
 }
+.thr p{
+    font-size: 120%;
+}
 .thr1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -236,17 +241,81 @@ footer{
     border: 1.5px solid #FCFF9E;
 }
 
+.six11{
+    background-color: rgba(217, 217, 217, 0.2);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 4%;
+}
+.sixh{
+    background-color: rgba(242, 233, 129, 1);
+    padding: 1%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.one1{
+    margin-top: 3%;
+    padding-bottom: 2%;
+}
+.sixaa{
+    text-decoration: none;
+}
+.six1 h3{
+    font-size: 150%;
+    text-align: center;
+    color: #2d2d2d;
+}
+.six1 p{ 
+    color: white;
+    font-size: 120%;
+    margin: 0;
+    margin-inline: 2%;
+    text-align: center;
+    text-decoration: none;
+    opacity: 1;
+}
+#p-1, #p-2, #p-3 {
+  scroll-margin-top: 100px;
+}
 
+.six1{
+    margin-inline: 4%;
+}
+.pp{
+    grid-column: span 2;
+}
+.ppp{
+    grid-column: span 3;
+}
 
-
-
-
-
-
-
-
-
-
+.new_pro {
+    background-image: linear-gradient(90deg, #FCFF9E 0%, #DABA43 100%);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-inline: 5%;
+    margin-bottom: 5%;
+    padding-inline: 3%;
+    border-radius: 5px;
+    padding-block: 1%;
+    border: none;
+}
+.new_pro1 {
+    background-image: linear-gradient(90deg, #FCFF9E 0%, #DABA43 100%);
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 12%;
+    margin-inline: 5%;
+    margin-bottom: 5%;
+    padding-inline: 3%;
+    border-radius: 5px;
+    padding-block: 1%;
+    border: none;
+}
 
 
 
@@ -432,6 +501,9 @@ footer{
     ul,.one p, .two p, .three p, .five p {
         font-size: 0.98em;
     }
+    .one p{
+        margin-inline: 4%;
+    }
     button, .but {
         font-size: 0.98em;
         padding: 0.6em 1.2em;
@@ -447,6 +519,25 @@ footer{
     }
     .thr2{
         margin-top: 1%;
+    }
+    .one1 h3{
+        font-size: 100%;
+    }
+    .one1 p{
+        font-size: 90%;
+    }
+    .six1{
+        padding-block: 4%;
+    }
+    
+    #p-1, #p-2, #p-3 {
+        scroll-margin-top: 0px;
+    }
+    
+    .one1{ 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
     }
 }
 

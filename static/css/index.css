@@ -9,21 +9,16 @@
 }
 
 .hero{
-    margin-top: 1%;
+    margin-top: 2%;
     float:right;
 }
 
 .nav .a1 {
-    float: left;
-    margin-top: 1.5%;
-    margin-right: 1.5%;
-    display: block;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     font-size: 20px;
 }
-
 
 .nav .a1:hover:not(.active) {
     color:  #c67700;
@@ -38,9 +33,11 @@
 head{
     font-family: Arial, Helvetica, sans-serif;
 }
-
+.foop{
+    text-align: justify;
+}
 body{
-    margin-top: 7%;
+    margin-top: 6%;
     background-color: #020321;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -117,6 +114,9 @@ button:hover {
     margin-left: 20%;
     margin-right: 20%;
     grid-column: 1 / span 2; 
+}
+.second2 p{
+    text-align: justify;
 }
 .second1 img{
     width: 94%;
